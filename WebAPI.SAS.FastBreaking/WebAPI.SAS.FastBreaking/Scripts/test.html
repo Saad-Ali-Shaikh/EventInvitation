@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="jquery-1.6.2.js" type="text/javascript"></script>
+     <script>
+         $(document).ready(function () {
+			 $.ajax({
+				 url: 'http://localhost/fastbreaking/api/events',
+				 type: 'GET',
+				 dataType: 'json',
+				 data: {},
+				 success: function (data, textStatus, xhr) {
+					 console.log(data);
+				 },
+				 error: function (xhr, textStatus, errorThrown) {
+					 console.log('Error in Operation');
+				 }
+			 });
+         });
+    </script>
+</head>
+<body>
+ 
+</body>
+</html>
